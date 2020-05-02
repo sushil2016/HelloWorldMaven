@@ -1,7 +1,7 @@
 node
 {
  stage("checkout"){
- git checkout 'https://github.com/sushil2016/HelloWorldMaven.git'
+ git 'https://github.com/sushil2016/HelloWorldMaven.git'
  }
  stage("Compile Package"){
   
