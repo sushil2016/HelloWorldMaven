@@ -12,4 +12,10 @@ node
   sh "docker build -t sushil2016/helloworld:1.0 ."
  }
  
+  stage("Push Docker image")
+ {
+  sh "docker login -u sushil2016 -p kalia@2016"
+  sh "docker push -t sushil2016/helloworld:1.0 ."
+ }
+ 
 }
