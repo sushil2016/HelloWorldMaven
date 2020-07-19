@@ -21,7 +21,8 @@ node
  stage("Run Container on DevServer")
  {
   
-  sh "docker run -p 8080:8080 -d name myapp sushil2016/helloworld:1.0"
+ def dockerrun= "docker run -p 8080:8080 -d name myapp sushil2016/helloworld:1.0"
+  sh ec2-user@13.234.20.165 ${dockerrun}
   
  }
  
