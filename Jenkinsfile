@@ -18,4 +18,11 @@ node
   sh "docker push  sushil2016/helloworld:1.0 "
  }
  
+ stage("Run Container on DevServer")
+ {
+  
+  sh "docker run -p 8080:8080 -d name myapp sushil2016/helloworld:1.0"
+  
+ }
+ 
 }
